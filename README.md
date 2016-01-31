@@ -21,3 +21,27 @@
 | Size | 1000000次非并发 |  1000000次并发  |
 | --- | ---:  | :----:  |
 | 1B  |   106574.142000 milliseconds      |     334873.662000 milliseconds   |
+##InnoDB
+###insert use autocommit
+| Size | 100次非并发 |  100次并发  |
+| --- | ---:  | :----:  |
+| 1B  |   1825.954000 milliseconds      |     1700.624000 milliseconds   |
+
+| Size | 1000次非并发 |  1000次并发  |
+| --- | ---:  | :----:  |
+| 1B  |   17087.246000 milliseconds      |     17677.181000 milliseconds   |
+###insert doesn't use autocommit
+| Size | 1000次非并发 |  1000次并发  |
+| --- | ---:  | :----:  |
+| 1B  |   135.862000 milliseconds      |      336.357000 milliseconds  |
+| 1K  |    178.235000 milliseconds     |    367.479000 milliseconds  |
+| 1M  |    22743.378000 milliseconds     |   36416.666000 milliseconds |
+
+| Size | 100000次非并发 |  100000次并发  |
+| --- | ---:  | :----:  |
+| 1B  |   9233.542000 milliseconds      |      31769.326000 milliseconds  |
+| 1K  |    25374.079000 milliseconds     |    45352.992000 milliseconds  |
+
+| Size | 1000000次非并发 |  1000000次并发  |
+| --- | ---:  | :----:  |
+| 1B  |   92098.966000 milliseconds      |      316967.485000 milliseconds  |
