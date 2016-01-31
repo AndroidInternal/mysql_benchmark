@@ -21,6 +21,26 @@
 | Size | 1000000次非并发 |  1000000次并发  |
 | --- | ---:  | :----:  |
 | 1B  |   106574.142000 milliseconds      |     334873.662000 milliseconds   |
+###update
+| Size | 10000条 |
+| --- | ---:  | :----:  |
+| 1B -> 1B |   12.728000 milliseconds      | 
+| 1B -> 1K  |    119.833000 milliseconds     |  
+| 1K -> 1M  |    150762.863000 milliseconds   | 
+
+| Size | 100000条 |
+| --- | ---:  | :----:  |
+| 1B -> 1M  |   70047.413000 milliseconds      | 
+| 1B -> 1B |    30.576000 milliseconds     |  
+| 1B -> 1K |    1069.717000 milliseconds     |  
+| 1K -> 1B |    245.646000 milliseconds     |  
+
+| Size | 1000000条 |
+| --- | ---:  | :----:  |
+| 1B -> 1B  |   2209.890000 milliseconds   | 
+| 1K -> 1B |    20819.543000 milliseconds     | 
+| 1B -> 1K  |   21960.751000 milliseconds   | 
+
 ##InnoDB
 ###insert use autocommit
 | Size | 100次非并发 |  100次并发  |
